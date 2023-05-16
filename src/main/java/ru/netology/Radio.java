@@ -13,6 +13,7 @@ public class Radio {
     public Radio() {
         maxRadioStation = 9;
     }
+
     public Radio(int size) {
         maxRadioStation = (minRadioStation + size) - 1;
     }
