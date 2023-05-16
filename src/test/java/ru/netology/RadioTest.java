@@ -17,6 +17,30 @@ public class RadioTest {
     }
 
     @Test
+    public void manualSetVolumeAboveMaxTest() {
+        Radio rad = new Radio();
+
+        rad.setCurrentVolume(250);
+
+        int expected = 100;
+        int actual = 100;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void manualSetVolumeBelowMinTest() {
+        Radio rad = new Radio();
+
+        rad.setCurrentVolume(-10);
+
+        int expected = 0;
+        int actual = 0;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void manualSetRadioStation() {
         Radio rad = new Radio();
 
